@@ -2,4 +2,4 @@
 
 使用opencv识别目标上的装甲板。
 
-![image](https://github.com/Kuwaaaa/armor-search/images/result.gif)
+![image](https://github.com/Kuwaaaa/armor-search/blob/main/images/result.gif)
