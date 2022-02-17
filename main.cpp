@@ -19,9 +19,9 @@ VideoCapture Avideo(const string& videoName = "Armor")
 		return VideoCapture("D:/app/resource/vision project/lab/1.mp4");
 }
 
-int v_thresh = 100;
-int v_contourMinArea = 20;
-int v_higherDiff = 143;
+const int v_thresh = 100;
+const int v_contourMinArea = 20;
+const int v_higherDiff = 143;
 
 int main()
 {
@@ -34,7 +34,7 @@ int main()
 		resize(frame, frame, Size(800, 450));					// 16:9
 
 		Armor_find armor(frame);
-		armor.findLightBar(FINDBAR_VER::VER1);
+		bool findArmor = armor.findLightBar(FINDBAR_VER::VER1);
 		
 		char state = waitKey(27);
 		if (state == 'p')

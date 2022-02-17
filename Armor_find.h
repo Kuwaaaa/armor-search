@@ -109,7 +109,7 @@ private:
 	static int v_higherDiff;
 
 private:
-	void findLightBar_ver1();
+	bool findLightBar_ver1();
 	// ‘§¥¶¿Ì
 	void proProcess();
 	
@@ -122,7 +122,7 @@ private:
 public:
 	Armor_find(const cv::Mat&);
 
-	void findLightBar(FINDBAR_VER ver = FINDBAR_VER::VER1);
+	bool findLightBar(FINDBAR_VER ver = FINDBAR_VER::VER1);
 
 };
 

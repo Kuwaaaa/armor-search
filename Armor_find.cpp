@@ -127,7 +127,7 @@ cv::Mat Armor_find::getArmorImg()
 	return Mat();
 }
 
-void Armor_find::findLightBar_ver1()
+bool Armor_find::findLightBar_ver1()
 {
 	// proProcess
 	proProcess();
@@ -213,26 +213,25 @@ void Armor_find::findLightBar_ver1()
 	smat.imshow("Armor");
 	smat.imshow("result");
 	if (!IsFindArmor)
-	{
-		waitKey();
-	}
+		return false;
+	else
+		return true;
+
 }
 
 
 Armor_find::Armor_find(const cv::Mat& src)
 	:frame_src(src)	,smat(src),frame_size(src.size())
 {
-	angleSolver.LoadCaramePar(CARAMEPAR);
+	angleSolver.LoadCaramePar("../carame.xml");
 	smat["thresh"];
 	smat["gray"];
 }
 
-void Armor_find::findLightBar(FINDBAR_VER ver /*= FINDBAR_VER::VER1*/)
+bool Armor_find::findLightBar(FINDBAR_VER ver /*= FINDBAR_VER::VER1*/)
 {
 	if (ver == FINDBAR_VER::VER1)
 		return findLightBar_ver1();
-	else
-		return ;
 }
 
 LightBar::LightBar(cv::RotatedRect rect)

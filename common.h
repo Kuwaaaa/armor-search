@@ -4,31 +4,31 @@
 struct ImgInfo
 {
 	std::string name;
-	// æœ€åä¿®æ”¹çš„èŠ‚ç‚¹
+	// ×îºóĞŞ¸ÄµÄ½Úµã
 	int LastNode;
-	// å»ºè®®ä½¿ç”¨çš„èŠ‚ç‚¹
+	// ½¨ÒéÊ¹ÓÃµÄ½Úµã
 	std::string RecomNode;
-	// å½“å‰æ–‡ä»¶æ—¶é—´
+	// µ±Ç°ÎÄ¼şÊ±¼ä
 	std::string Date;
-	// é¢„å¤„ç†é˜ˆå€¼
+	// Ô¤´¦ÀíãĞÖµ
 	int ProThresh;
-	// é—ç•™é—®é¢˜
-	std::string Response = "æ²¡æœ‰é—®é¢˜ï¼";
+	// ¸ĞÏë
+	std::string Response = "Ã»ÓĞÎÊÌâ£¡";
 
 	ImgInfo() = default;
 };
 
-const int color_threshold = 100 - 20;   // é€šé“ç›¸å‡çš„colorImgä½¿ç”¨çš„äºŒå€¼åŒ–é˜ˆå€¼
-const int bright_threshold = 60;        // äº®åº¦å›¾äºŒå€¼åŒ–é˜ˆå€¼
+const int color_threshold = 100 - 20;   //color threshold for colorImg from substract channels Í¨µÀÏà¼õµÄcolorImgÊ¹ÓÃµÄ¶şÖµ»¯ãĞÖµ
+const int bright_threshold = 60;  //color threshold for brightImg ÁÁ¶ÈÍ¼¶şÖµ»¯ãĞÖµ
  
-const float min_area = 50;		// ç¯æ¡å…è®¸çš„æœ€å°é¢ç§¯
-const float max_angle = 45;	        // ç¯æ¡å…è®¸çš„æœ€å¤§åè§’
+const float min_area = 50;		// min area of light bar µÆÌõÔÊĞíµÄ×îĞ¡Ãæ»ı
+const float max_angle = 45;	//max angle of light bar µÆÌõÔÊĞíµÄ×î´óÆ«½Ç
 
-const float max_angle_diff = 6;         // ä¸¤ä¸ªç¯æ¡ä¹‹é—´å…è®¸çš„æœ€å¤§è§’åº¦å·®
-const float max_lengthDiff_ratio = 0.5; // ä¸¤ä¸ªç¯æ¡ä¹‹é—´å…è®¸çš„æœ€å¤§é•¿åº¦å·®æ¯”å€¼
-const float max_deviation_angle = 50;   // ä¸¤ç¯æ¡æœ€å¤§é”™ä½è§’
+const float max_angle_diff = 6; //max angle difference between two light bars Á½¸öµÆÌõÖ®¼äÔÊĞíµÄ×î´ó½Ç¶È²î
+const float max_lengthDiff_ratio = 0.5; //max length ratio difference between two light bars Á½¸öµÆÌõÖ®¼äÔÊĞíµÄ×î´ó³¤¶È²î±ÈÖµ
+const float max_deviation_angle = 50; //max deviation angle Á½µÆÌõ×î´ó´íÎ»½Ç
  
 const float max_y_diff_ratio = 0.5;  //max y 
 const float max_x_diff_ratio = 4.5;  //max x
 
-#define CARAMEPAR "./carame.xml"
+#define CARAMEPAR "D:/VsProjects/ArmorRecognition/carame.xml"
