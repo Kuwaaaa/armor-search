@@ -16,7 +16,7 @@ using namespace cv;
 VideoCapture Avideo(const string& videoName = "Armor")
 {
 	if (videoName == "Armor")
-		return VideoCapture("D:/app/resource/vision project/lab/1.mp4");
+		return VideoCapture("./1.mp4");
 }
 
 const int v_thresh = 100;
